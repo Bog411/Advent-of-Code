@@ -7,4 +7,4 @@ f z = zip (map length $ group z) (map head $ group z)
 g = concatMap (\(a,b) -> [a,b,]) 
 
 ans = (!! 40) . iterate ( g.f ) 
-map intToChar ans input
+length ans input
